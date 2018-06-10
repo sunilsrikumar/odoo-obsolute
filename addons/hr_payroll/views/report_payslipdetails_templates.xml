@@ -73,7 +73,7 @@
                             <tr>
                                 <th>Code</th>
                                 <th>Name</th>
-                                <th>Quantity/rate</th>
+                                <!-- <th>Quantity/rate</th> -->
                                 <th>Amount</th>
                                 <th>Total</th>
                             </tr>
@@ -82,7 +82,7 @@
                             <tr t-foreach="get_lines_by_contribution_register.get(o.id, [])" t-as="p">
                                 <td><span t-esc="p.get('code', '')"/></td>
                                 <td><span t-esc="p.get('name', '')"/></td>
-                                <td><span t-esc="p.get('quantity', '')"/></td>
+                                <!-- <td><span t-esc="p.get('quantity', '')"/></td> -->
                                 <td><span t-esc="p.get('amount', 0)"/></td>
                                 <td class="text-right">
                                     <span t-esc="p.get('total', 0)"
@@ -91,6 +91,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    
 
                     <p class="text-right"><strong>Authorized signature</strong></p>
                 </div>
