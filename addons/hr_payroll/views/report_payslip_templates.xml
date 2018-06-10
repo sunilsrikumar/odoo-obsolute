@@ -5,7 +5,7 @@
         <t t-foreach="docs" t-as="o">
             <t t-call="web.external_layout">
                 <div class="page">
-                    <h2>Pay Slip</h2>
+                    <strong>Pay Slip</strong>
                     <p t-field="o.name"/>
 
                     <table class="table table-condensed table-bordered">
@@ -47,7 +47,7 @@
                             <tr>
                                 <th>Code</th>
                                 <th>Name</th>
-                                <th>Quantity/rate</th>
+                                <!-- <th>Quantity/rate</th> -->
                                 <th>Amount</th>
                                 <th>Total</th>
                             </tr>
@@ -56,7 +56,7 @@
                                 <tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip)" t-as="line">
                                 <td><span t-field="line.code"/></td>
                                 <td><span t-field="line.name"/></td>
-                                <td><span t-field="line.quantity"/></td>
+                                <!-- <td><span t-field="line.quantity"/></td> -->
                                 <td><span t-esc="line.amount"
                                           t-esc-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
                                 <td><span t-esc="line.total"
